@@ -1,0 +1,27 @@
+@import "src/assets/styles/colors";
+
+.inputFieldWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  .label {
+    color: $primary-text-color;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "Abel";
+  }
+
+  .input {
+    width: 273px;
+    height: 32px;
+    border-radius: 20px;
+    border: 1px solid $input-border-color;
+
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 40px;
+  }
+}

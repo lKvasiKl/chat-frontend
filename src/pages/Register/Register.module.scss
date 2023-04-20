@@ -1,0 +1,11 @@
+@import "../../assets/styles/colors";
+
+.registerPage {
+  position: relative;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 656px;
+  height: 100vh;
+}

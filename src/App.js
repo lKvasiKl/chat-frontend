@@ -1,11 +1,9 @@
-import './App.css';
+import "./App.scss";
+import Login from "./pages/Login/Login";
+//import Register from "./pages/Register/Register";
 
 function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+  return <Login chatName="Chat Name" />;
 }
 
 export default App;

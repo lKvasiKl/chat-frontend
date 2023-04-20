@@ -1,0 +1,15 @@
+@import '../../assets/styles/colors';
+
+.button {
+    background-color: $primary-bytton-color;
+    color: $white-color;
+    border: none;
+    width: 170px;
+    height: 29px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover-bytton-color;
+    }
+}
