@@ -1,9 +1,7 @@
-import "./App.scss";
-import Login from "./pages/Login/Login";
-//import Register from "./pages/Register/Register";
+import GuestRoutes from "./routes/GuestRoutes";
 
 function App() {
-  return <Login chatName="Chat Name" />;
+  return <GuestRoutes />;
 }
 
 export default App;
