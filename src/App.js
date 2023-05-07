@@ -1,7 +1,12 @@
-import GuestRoutes from "./routes/GuestRoutes";
+import AuthProvider from "./providers/auth/AuthProvider";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-  return <GuestRoutes />;
+  return (
+    <AuthProvider>
+      <AppRoutes />
+    </AuthProvider>
+  );
 }
 
 export default App;

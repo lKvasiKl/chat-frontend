@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { REGISTER_ROUTE } from "../../constants/routePath";
+import { useAuth } from "../../hooks/useAuth";
 import Form from "../../components/Form/Form";
 import AuthContainer from "../../layouts/AuthContainer/AuthContainer";
 
@@ -15,9 +16,11 @@ const linkToRegister = (
 );
 
 const Login = () => {
+  const { login } = useAuth();
+
   return (
     <AuthContainer link={linkToRegister}>
-      <Form children="Login" />
+      <Form children="Login" onSubmit={login} />
     </AuthContainer>
   );
 };
