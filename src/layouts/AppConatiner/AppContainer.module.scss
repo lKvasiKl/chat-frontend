@@ -1,4 +1,8 @@
 @import "../../assets/styles/colors";
 
-.appContainer {
+.appConatiner {
+  background-color: $white-color;
+  width: 100%;
+  max-width: 656px;
+  height: 100vh;
 }
