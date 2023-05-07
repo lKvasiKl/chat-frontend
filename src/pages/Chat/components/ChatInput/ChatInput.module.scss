@@ -1,0 +1,31 @@
+@import "../../../../assets/styles/colors";
+
+.inputContainer {
+  height: 56px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  max-width: 656px;
+  bottom: 0;
+  padding: 8px 10px 8px 72px;
+  box-shadow: 0px -1px 0px $box-shadow-color;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .input {
+    width: 100%;
+    max-width: 544px;
+    height: 40px;
+    border: 1px solid $message-color;
+    border-radius: 20px;
+    padding: 0 16px;
+  }
+
+  .sendButton {
+    border: none;
+    background-color: transparent;
+    height: 20px;
+    cursor: pointer;
+  }
+}

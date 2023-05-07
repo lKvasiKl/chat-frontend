@@ -1,0 +1,51 @@
+@import "../../assets/styles/colors";
+
+.messageContainer {
+  display: flex;
+  word-wrap: break-word;
+  flex-direction: column;
+  width: fit-content;
+  gap: 5px;
+
+  .message {
+    display: inherit;
+    flex-direction: inherit;
+    gap: inherit;
+    max-width: 270px;
+    font-size: 14px;
+    font-family: "Abel";
+    padding: 8px 16px;
+  }
+
+  .author {
+    font-weight: bold;
+  }
+
+  .date {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-family: "Abel";
+    color: $message-date-color;
+  }
+
+  .primary {
+    background-color: $message-color;
+    border-radius: 16px 16px 0 16px;
+  }
+
+  .secondary {
+    border: 1px solid $message-color;
+    border-radius: 16px 16px 16px 0px;
+  }
+
+  &.right {
+    align-self: end;
+    padding-right: 32px;
+  }
+
+  &.left {
+    align-self: start;
+    padding-left: 32px;
+  }
+}

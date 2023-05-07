@@ -1,0 +1,14 @@
+.messageListContainer {
+  position: absolute !important;
+  width: 100%;
+  max-width: 656px;
+  top: 56px;
+  bottom: 56px;
+  overflow-y: auto;
+
+  .messageList {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+}
