@@ -9,10 +9,9 @@ export const AuthContext = createContext({});
 
 const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
-  const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    const accessToken = getSessionFromStorage('accessToken') || false;
+    const accessToken = getSessionFromStorage("accessToken") || false;
 
     if (accessToken) {
       setIsAuth(true);
@@ -31,14 +30,11 @@ const AuthProvider = ({ children }) => {
 
   const logout = () => {
     setIsAuth(false);
-    setCurrentUser({});
     removeSessionFromStorage("accessToken");
   };
 
   const value = {
     isAuth,
-    currentUser,
-    setCurrentUser,
     register,
     login,
     logout,

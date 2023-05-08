@@ -1,7 +1,8 @@
+import { getCurrentUserId } from "../../../../helpers/user";
 import Message from "../../../../components/Message/Message";
 
 const ChatMessage = ({ messageData }) => {
-  const isCurrentUserMessage = messageData.authorId === "dd6df17a-d4e0-4d3b-8440-75776fd3aa30"; //currentUserId;
+  const isCurrentUserMessage = messageData.authorId === getCurrentUserId();
 
   return isCurrentUserMessage ? (
     <Message text={messageData.content} date={messageData.sentAt} />

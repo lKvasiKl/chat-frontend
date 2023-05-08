@@ -1,8 +1,9 @@
-import axios from "axios";
 import { getSessionFromStorage } from "../helpers/tokens";
+import { SERVER_URL } from "../constants/serverPath";
+import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:9000",
+  baseURL: SERVER_URL,
 });
 
 const request = async ({ headers = {}, method, url, data, params }) => {

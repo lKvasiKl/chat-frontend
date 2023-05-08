@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { SendButtonIcon } from "../../../../assets/images";
+import { createMessage } from "../../../../helpers/message";
 
 import styles from "./ChatInput.module.scss";
 
@@ -8,7 +9,7 @@ const ChatInput = ({ onSendMessage }) => {
   const inputRef = useRef(null);
 
   const sendMessageHandler = () => {
-    onSendMessage(messageValue);
+    onSendMessage(createMessage(messageValue));
     setMessageValue("");
     inputRef.current?.focus();
   };
@@ -18,11 +19,11 @@ const ChatInput = ({ onSendMessage }) => {
   };
 
   const sendButtonClickHandler = () => {
-    sendMessageHandler();
+    sendMessageHandler(messageValue);
   };
 
   const enterDownHandler = (event) => {
-    event.key === "Enter" && sendMessageHandler();
+    event.key === "Enter" && sendMessageHandler(messageValue);
   };
 
   return (
