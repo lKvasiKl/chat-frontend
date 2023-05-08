@@ -8,7 +8,6 @@ import {
 } from "../../constants/serverPath";
 import ChatMessageList from "./components/ChatMessageList/ChatMessageList";
 import SockJS from "sockjs-client";
-
 import ChatInput from "./components/ChatInput/ChatInput";
 
 const sockJS = new SockJS(`${SERVER_URL}/sockjs`);
@@ -38,7 +37,10 @@ const Chat = () => {
 
   return (
     <>
-      <ChatMessageList messageList={messageList} />
+      <ChatMessageList
+        messageList={messageList}
+        setMessageList={setMessageList}
+      />
       <ChatInput onSendMessage={sendMessageHandler} />
     </>
   );

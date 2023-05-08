@@ -7,7 +7,7 @@ const MESSAGE_TYPE_STYLES = {
   secondary: styles.secondary,
 };
 
-const MESSAGE_POSSITION_STYLES = {
+const MESSAGE_POSITION_STYLES = {
   right: styles.right,
   left: styles.left,
 };
@@ -15,7 +15,7 @@ const MESSAGE_POSSITION_STYLES = {
 const Message = ({ author, text, date, type = "primary", position = "right" }) => {
   const messageContainerClassNames = classNames(
     styles.messageContainer,
-    MESSAGE_POSSITION_STYLES[position]
+    MESSAGE_POSITION_STYLES[position]
   );
   
   const messageClassNames = classNames(

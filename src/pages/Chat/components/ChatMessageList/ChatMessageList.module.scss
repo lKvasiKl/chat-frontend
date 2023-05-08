@@ -4,7 +4,9 @@
   max-width: 656px;
   top: 56px;
   bottom: 56px;
-  overflow-y: auto;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
 
   .messageList {
     display: flex;
