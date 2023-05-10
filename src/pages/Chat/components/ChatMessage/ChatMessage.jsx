@@ -1,16 +1,22 @@
 import { getCurrentUserId } from "../../../../helpers/user";
 import Message from "../../../../components/Message/Message";
 
-const ChatMessage = ({ messageData }) => {
+const ChatMessage = ({ messageData, onContextMenu }) => {
   const isCurrentUserMessage = messageData.authorId === getCurrentUserId();
 
   return isCurrentUserMessage ? (
-    <Message text={messageData.content} date={messageData.sentAt} />
+    <Message
+      messageId={messageData.id}
+      text={messageData.content}
+      date={messageData.sentAt}
+      onContextMenu={onContextMenu}
+    />
   ) : (
     <Message
       type="secondary"
       position="left"
       author={messageData.authorNickname}
+      messageId={messageData.id}
       text={messageData.content}
       date={messageData.sentAt}
     />

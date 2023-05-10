@@ -1,29 +1,38 @@
-import { useState, useRef } from "react";
 import { SendButtonIcon } from "../../../../assets/images";
-import { createMessage } from "../../../../helpers/message";
+import { createMessage, editMessage } from "../../../../helpers/message";
 
 import styles from "./ChatInput.module.scss";
 
-const ChatInput = ({ onSendMessage }) => {
-  const [messageValue, setMessageValue] = useState("");
-  const inputRef = useRef(null);
+const ChatInput = ({
+  inputRef,
+  messageText,
+  setMessageText,
+  isMessageEditing,
+  onSendMessage,
+  onEditMessage
+}) => {
 
-  const sendMessageHandler = () => {
-    onSendMessage(createMessage(messageValue));
-    setMessageValue("");
+  const handleSendMessage = () => {
+    if (isMessageEditing) {
+      onEditMessage(messageText);
+    } else {
+      onSendMessage(messageText);
+    }
+
+    setMessageText("");
     inputRef.current?.focus();
   };
 
-  const inputChangeHandler = (event) => {
-    setMessageValue(event.target.value);
+  const handleInputChange = (event) => {
+    setMessageText(event.target.value);
   };
 
-  const sendButtonClickHandler = () => {
-    sendMessageHandler(messageValue);
+  const handleSendButtonClick = () => {
+    handleSendMessage();
   };
 
-  const enterDownHandler = (event) => {
-    event.key === "Enter" && sendMessageHandler(messageValue);
+  const handleEnterKeyDown = (event) => {
+    event.key === "Enter" && handleSendMessage();
   };
 
   return (
@@ -31,12 +40,12 @@ const ChatInput = ({ onSendMessage }) => {
       <input
         className={styles.input}
         placeholder="Send a message"
-        value={messageValue}
+        value={messageText}
         ref={inputRef}
-        onChange={inputChangeHandler}
-        onKeyDown={enterDownHandler}
+        onChange={handleInputChange}
+        onKeyDown={handleEnterKeyDown}
       ></input>
-      <button className={styles.sendButton} onClick={sendButtonClickHandler}>
+      <button className={styles.sendButton} onClick={handleSendButtonClick}>
         <SendButtonIcon />
       </button>
     </div>

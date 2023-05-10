@@ -12,12 +12,20 @@ const MESSAGE_POSITION_STYLES = {
   left: styles.left,
 };
 
-const Message = ({ author, text, date, type = "primary", position = "right" }) => {
+const Message = ({
+  messageId,
+  author,
+  text,
+  date,
+  type = "primary",
+  position = "right",
+  onContextMenu,
+}) => {
   const messageContainerClassNames = classNames(
     styles.messageContainer,
     MESSAGE_POSITION_STYLES[position]
   );
-  
+
   const messageClassNames = classNames(
     styles.message,
     MESSAGE_TYPE_STYLES[type]
@@ -31,7 +39,11 @@ const Message = ({ author, text, date, type = "primary", position = "right" }) =
 
   return (
     <div className={messageContainerClassNames}>
-      <div className={messageClassNames}>
+      <div
+        data-message-id={messageId}
+        className={messageClassNames}
+        onContextMenu={onContextMenu}
+      >
         {author && <span className={styles.author}>{author}</span>}
         <span>{text}</span>
       </div>
