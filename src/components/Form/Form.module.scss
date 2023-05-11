@@ -1,7 +1,7 @@
 @import "../../assets/styles/colors";
 
 .form {
-  position: absolute;
+  position: absolute; // Позиц эл отн ближ позиционир родит эл или относ самого окна браузера, если такого элемента нет
   top: 50%;
   transform: translate(0, -50%);
   display: inherit;

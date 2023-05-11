@@ -86,6 +86,7 @@ const ChatMessageList = ({
   return (
     <div
       id="infinite-scroll"
+      style={{ position: "absolute" }}
       className={styles.messageListContainer}
       onScroll={handleScroll}
     >

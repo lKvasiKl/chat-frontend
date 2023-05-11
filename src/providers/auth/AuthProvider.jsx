@@ -5,6 +5,8 @@ import {
 } from "../../helpers/tokens";
 import * as authService from "../../services/authService";
 
+// Контекст позволяет передавать данные от родительских компонентов к дочерним компонентам
+// без необходимости передавать пропсы через каждый промежуточный компонент.
 export const AuthContext = createContext({});
 
 const AuthProvider = ({ children }) => {

@@ -1,5 +1,4 @@
 import { SendButtonIcon } from "../../../../assets/images";
-import { createMessage, editMessage } from "../../../../helpers/message";
 
 import styles from "./ChatInput.module.scss";
 
@@ -8,11 +7,17 @@ const ChatInput = ({
   messageText,
   setMessageText,
   isMessageEditing,
+  setIsEditing,
   onSendMessage,
-  onEditMessage
+  onEditMessage,
 }) => {
-
   const handleSendMessage = () => {
+    if (messageText === "") {
+      setIsEditing(false);
+
+      return;
+    }
+
     if (isMessageEditing) {
       onEditMessage(messageText);
     } else {

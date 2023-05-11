@@ -1,9 +1,10 @@
+import { AUTH_URL, REGISTER_URL } from "../constants/serverPath";
 import { addSessionToStorage } from "../helpers/tokens";
 import { request } from "./axiosService";
 
 const register = async ({ nickname, password }) => {
   const response = await request({
-    url: "/api/v1/auth/register",
+    url: REGISTER_URL,
     method: "POST",
     data: {
       nickname,
@@ -16,7 +17,7 @@ const register = async ({ nickname, password }) => {
 
 const login = async ({ nickname, password }) => {
   const response = await request({
-    url: "/api/v1/auth",
+    url: AUTH_URL,
     method: "POST",
     data: {
       nickname,

@@ -1,12 +1,11 @@
 .messageListContainer {
-  position: absolute !important;
   width: 100%;
   max-width: 656px;
   top: 56px;
   bottom: 56px;
   overflow: auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column-reverse; // Пример: для контейнера с 3 элементами, первый элемент расположится внизу, а третий элемент сверху.
 
   .messageList {
     display: flex;

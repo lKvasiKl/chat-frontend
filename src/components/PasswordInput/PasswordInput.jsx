@@ -17,6 +17,7 @@ const PasswordInput = ({ label, onChange }) => {
 
   const handleEyeIconClick = (event) => {
     event.stopPropagation();
+
     setPasswordVisible((prevState) => !prevState);
   };
 

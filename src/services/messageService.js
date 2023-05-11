@@ -1,8 +1,9 @@
+import { SERVER_URL, SEND_MESSAGE } from "../constants/serverPath";
 import { request } from "./axiosService";
 
 const getMessages = async (before, size) => {
   return await request({
-    url: "http://localhost:9000/api/v1/message",
+    url: `${SERVER_URL}${SEND_MESSAGE}`,
     method: "GET",
     params: {
       before: before,

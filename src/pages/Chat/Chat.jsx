@@ -138,6 +138,7 @@ const Chat = () => {
         messageText={messageText}
         setMessageText={setMessageText}
         isMessageEditing={isEditing}
+        setIsEditing={setIsEditing}
         onSendMessage={sendMessage}
         onEditMessage={onEndEditMessage}
       />

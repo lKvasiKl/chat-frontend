@@ -1,7 +1,7 @@
 @import '../../assets/styles/colors';
 
 .button {
-    background-color: $primary-bytton-color;
+    background-color: $primary-button-color;
     color: $white-color;
     border: none;
     width: 170px;
@@ -10,6 +10,6 @@
     cursor: pointer;
 
     &:hover {
-        background-color: $hover-bytton-color;
+        background-color: $hover-button-color;
     }
 }

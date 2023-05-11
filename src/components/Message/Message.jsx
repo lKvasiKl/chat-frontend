@@ -17,6 +17,7 @@ const Message = ({
   author,
   text,
   date,
+  isEdit,
   type = "primary",
   position = "right",
   onContextMenu,
@@ -46,6 +47,7 @@ const Message = ({
       >
         {author && <span className={styles.author}>{author}</span>}
         <span>{text}</span>
+        {isEdit && <span className={styles.isEdit}>edited</span>}
       </div>
       <span className={styles.date}>{formattedTime}</span>
     </div>

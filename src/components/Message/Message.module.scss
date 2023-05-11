@@ -39,6 +39,16 @@
     border-radius: 16px 16px 16px 0px;
   }
 
+  .isEdit {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: bold;
+    color: $message-date-color;
+    font-family: "Abel";
+    padding-top: 5px;
+  }
+
   &.right {
     align-self: end;
     padding-right: 32px;

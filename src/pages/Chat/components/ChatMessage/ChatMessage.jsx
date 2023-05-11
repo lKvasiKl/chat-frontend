@@ -9,6 +9,7 @@ const ChatMessage = ({ messageData, onContextMenu }) => {
       messageId={messageData.id}
       text={messageData.content}
       date={messageData.sentAt}
+      isEdit={messageData.edited}
       onContextMenu={onContextMenu}
     />
   ) : (
@@ -19,6 +20,7 @@ const ChatMessage = ({ messageData, onContextMenu }) => {
       messageId={messageData.id}
       text={messageData.content}
       date={messageData.sentAt}
+      isEdit={messageData.edited}
     />
   );
 };

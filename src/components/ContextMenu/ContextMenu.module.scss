@@ -1,12 +1,13 @@
 @import "../../assets/styles/colors";
 
 .menuList {
-  position: fixed;
+  position: fixed; //Позиционирует элемент относительно окна браузера
   background-color: $white-color;
   list-style: none;
+  z-index: 1;
   width: fit-content;
   height: fit-content;
   min-width: 48px;
-  box-shadow: 0px 0px 10px 3px $box-shadow-color;
+  box-shadow: 0px 0px 10px 3px $box-shadow-color; // горизонтально, вертикально, размытие, растяжение
   border-radius: 5px;
 }

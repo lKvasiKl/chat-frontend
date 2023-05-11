@@ -1,4 +1,6 @@
 const SERVER_URL = "http://localhost:9000";
+const REGISTER_URL = "/api/v1/auth/register";
+const AUTH_URL = "/api/v1/auth";
 const SEND_MESSAGE = "/api/v1/message";
 const EDIT_MESSAGE = "/api/v1/message/edit";
 const DELETE_MESSAGE = "/api/v1/message/remove";
@@ -8,6 +10,8 @@ const DELETED_MESSAGE_DESTINATION = "/chat/ba583994-eb2f-46fd-a359-154a399ded5d/
 
 export {
   SERVER_URL,
+  REGISTER_URL,
+  AUTH_URL,
   SEND_MESSAGE,
   EDIT_MESSAGE,
   DELETE_MESSAGE,
