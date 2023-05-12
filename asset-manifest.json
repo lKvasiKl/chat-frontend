@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/chat-frontend/static/css/main.355bac80.css",
-    "main.js": "/chat-frontend/static/js/main.ea9d60c3.js",
+    "main.js": "/chat-frontend/static/js/main.6a47bc01.js",
     "static/media/LogoutButtonIcon.svg": "/chat-frontend/static/media/LogoutButtonIcon.b75258948e63220606eb95cd823303a4.svg",
     "index.html": "/chat-frontend/index.html",
     "static/media/SendButtonIcon.svg": "/chat-frontend/static/media/SendButtonIcon.86b0098900c1e64eb897f13fd9f3b403.svg",
     "main.355bac80.css.map": "/chat-frontend/static/css/main.355bac80.css.map",
-    "main.ea9d60c3.js.map": "/chat-frontend/static/js/main.ea9d60c3.js.map"
+    "main.6a47bc01.js.map": "/chat-frontend/static/js/main.6a47bc01.js.map"
   },
   "entrypoints": [
     "static/css/main.355bac80.css",
-    "static/js/main.ea9d60c3.js"
+    "static/js/main.6a47bc01.js"
   ]
 }
